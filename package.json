@@ -1,0 +1,32 @@
+{
+  "name": "rtsp-recorder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "./node_modules/.bin/eslint .",
+    "ci": "npm install && npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sahilchaddha/node-rtsp-recorder.git"
+  },
+  "author": "Sahil Chaddha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sahilchaddha/node-rtsp-recorder/issues"
+  },
+  "homepage": "https://github.com/sahilchaddha/node-rtsp-recorder#readme",
+  "devDependencies": {
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0"
+  },
+  "dependencies": {
+    "babel-eslint": "^8.2.6",
+    "du": "^0.1.0",
+    "moment": "^2.22.2",
+    "rimraf": "^2.6.2"
+  }
+}
