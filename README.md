@@ -1,5 +1,7 @@
 # node-rtsp-recorder
 
+RTSP Stream Recorder.
+
 [![NPM](https://nodei.co/npm/node-rtsp-recorder.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/node-rtsp-recorder/)
 
 [![npm](https://img.shields.io/npm/dm/node-rtsp-recorder.svg)](https://www.npmjs.com/package/node-rtsp-recorder)
