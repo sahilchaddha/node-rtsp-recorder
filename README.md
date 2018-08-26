@@ -6,6 +6,7 @@ RTSP Stream Recorder.
 
 [![npm](https://img.shields.io/npm/dm/node-rtsp-recorder.svg)](https://www.npmjs.com/package/node-rtsp-recorder)
 [![npm](https://img.shields.io/npm/v/node-rtsp-recorder.svg)](https://www.npmjs.com/package/node-rtsp-recorder)
+[![CircleCI](https://circleci.com/gh/sahilchaddha/node-rtsp-recorder.svg?style=svg)](https://circleci.com/gh/sahilchaddha/node-rtsp-recorder)
 
 Records RTSP Audio/Visual Streams to local disk using ffmpeg
 
