@@ -12,6 +12,8 @@ var rec = new Recorder({
   timeLimit: 60,
   folder: '/Users/sahilchaddha/Sahil/Projects/Github/node-rtsp-recorder/videos',
   name: 'cam1',
+  directoryPathFormat: 'MMM-Do-YY',
+  fileNameFormat: 'YYYY-M-D-h-mm-ss',
 })
 rec.startRecording();
 

@@ -20,6 +20,8 @@ const RTSPRecorder = class {
     this.timeLimit = config.timeLimit || 60
     this.folder = config.folder || 'media/'
     this.categoryType = config.type || 'video'
+    this.directoryPathFormat = config.directoryPathFormat || 'MMM-Do-YY'
+    this.fileNameFormat = config.fileNameFormat || 'YYYY-M-D-h-mm-ss'
     fh.createDirIfNotExists(this.getDirectoryPath())
     fh.createDirIfNotExists(this.getTodayPath())
   }
@@ -29,7 +31,7 @@ const RTSPRecorder = class {
   }
 
   getTodayPath() {
-    return path.join(this.getDirectoryPath(), moment().format('MMM-Do-YY'))
+    return path.join(this.getDirectoryPath(), moment().format(this.directoryPathFormat))
   }
 
   getMediaTypePath() {
@@ -37,7 +39,7 @@ const RTSPRecorder = class {
   }
 
   getFilename(folderPath) {
-    return path.join(folderPath, moment().format() + this.getExtenstion())
+    return path.join(folderPath, moment().format(this.fileNameFormat) + this.getExtenstion())
   }
 
   getExtenstion() {

@@ -95,3 +95,23 @@ Records RTSP Audio/Visual Streams to local disk using ffmpeg
     console.log('Done')
     })
 ```
+
+### Setting custom filename formats
+
+```js
+    const Recorder = require('node-rtsp-recorder').Recorder
+
+    var rec = new Recorder({
+        url: 'rtsp://192.168.1.12:8554/unicast',
+        timeLimit: 60, // time in seconds for each segmented video file
+        folder: '/Users/sahilchaddha/Sahil/Projects/Github/node-rtsp-recorder/videos',
+        name: 'cam1',
+        directoryPathFormat: 'MMM-D-YYYY',
+        fileNameFormat: 'M-D-h-mm-ss',
+    })
+    // Default directoryPathFormat : MMM-Do-YY
+    // Default fileNameFormat : YYYY-M-D-h-mm-ss
+    // Refer to https://momentjscom.readthedocs.io/en/latest/moment/04-displaying/01-format/ for custom formats.
+    // Starts Recording
+    rec.startRecording();
+```
