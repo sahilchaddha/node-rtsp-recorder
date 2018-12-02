@@ -1,6 +1,6 @@
 {
   "name": "node-rtsp-recorder",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "RTSP Stream Recorder",
   "main": "src/index.js",
   "scripts": {
