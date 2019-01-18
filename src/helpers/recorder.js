@@ -64,7 +64,7 @@ const RTSPRecorder = class {
   }
 
   getChildProcess(fileName) {
-    var args = ['-i', this.url]
+    var args = ['-rtsp_transport','tcp','-i', this.url]
     const mediaArgs = this.getArguments()
     mediaArgs.forEach((item) => {
       args.push(item)
