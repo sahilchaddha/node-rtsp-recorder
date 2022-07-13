@@ -22,6 +22,7 @@ const RTSPRecorder = class {
     this.categoryType = config.type || 'video'
     this.directoryPathFormat = config.directoryPathFormat || 'MMM-Do-YY'
     this.fileNameFormat = config.fileNameFormat || 'YYYY-M-D-h-mm-ss'
+    this.audioCodec = config.audioCodec || 'copy'
     fh.createDirIfNotExists(this.getDirectoryPath())
     fh.createDirIfNotExists(this.getTodayPath())
   }
@@ -60,7 +61,7 @@ const RTSPRecorder = class {
     if (this.categoryType === 'image') {
       return ['-vframes', '1']
     }
-    return ['-acodec', 'copy', '-vcodec', 'copy']
+    return ['-acodec', this.audioCodec, '-vcodec', 'copy']
   }
 
   getChildProcess(fileName) {

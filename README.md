@@ -37,6 +37,20 @@ Records RTSP Audio/Visual Streams to local disk using ffmpeg
     }, 300000)
 ```
 
+
+> If your camera generates empty .mp4 files when recording, you might need to update its audio codec by passing in one usable by your camera (e.g., `aac`) in the Recorder's constructor. For example:
+
+
+```js
+  var rec = new Recorder({
+    url: 'rtsp://192.168.1.12:8554/unicast',
+        timeLimit: 60, // time in seconds for each segmented video file
+        folder: '/Users/sahilchaddha/Sahil/Projects/Github/node-rtsp-recorder/videos',
+        name: 'cam1',
+        audioCodec: 'aac'
+  })
+```
+
 ## Recording Audio 
 
 ```js
