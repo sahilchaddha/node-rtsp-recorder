@@ -23,6 +23,7 @@ const RTSPRecorder = class {
     this.directoryPathFormat = config.directoryPathFormat || 'MMM-Do-YY'
     this.fileNameFormat = config.fileNameFormat || 'YYYY-M-D-h-mm-ss'
     this.audioCodec = config.audioCodec || 'copy'
+    this.videoFormat = config.videoFormat || 'mkv'
     fh.createDirIfNotExists(this.getDirectoryPath())
     fh.createDirIfNotExists(this.getTodayPath())
   }
@@ -51,7 +52,7 @@ const RTSPRecorder = class {
       return '.jpg'
     }
 
-    return '.mp4'
+    return '.' + this.videoFormat
   }
 
   getArguments() {

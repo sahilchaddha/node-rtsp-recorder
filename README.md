@@ -26,6 +26,7 @@ Records RTSP Audio/Visual Streams to local disk using ffmpeg
         timeLimit: 60, // time in seconds for each segmented video file
         folder: '/Users/sahilchaddha/Sahil/Projects/Github/node-rtsp-recorder/videos',
         name: 'cam1',
+        videoFormat: 'mkv'
     })
     // Starts Recording
     rec.startRecording();
